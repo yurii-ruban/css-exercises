@@ -1,0 +1,14 @@
+.origin,
+.descendant {
+    font-size: 28px;
+    font-family: Helvetica, "Times New Roman", sans-serif;
+}
+
+.origin {
+    background-color: rgb(59, 175, 213);
+    color: white;
+}
+
+.descendant {
+    background-color: rgb(239, 220, 15);
+}
