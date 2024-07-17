@@ -2,10 +2,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Grouping 2 selectors. Define color and boldness*/
 .para,
 .small-para {
   color: hsl(0, 0%, 0%);
   font-weight: 800;
+}
+
+/* Move it upper to not affect smaller one, which
+   has the same specificity, but should be redefined last */
+.para {
+  font-size: 22px;
 }
 
 .small-para {
@@ -13,15 +20,7 @@ body {
   font-weight: 800;
 }
 
-.para {
-  font-size: 22px;
-}
 
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -29,12 +28,27 @@ body {
   font-size: 20px;
 }
 
-.child {
+/* Moved confirm class under button to make
+   background green since it's the last change
+   between conflicting two */
+.confirm {
+  background: green;
+  color: white;
+  font-weight: bold;
+}
+
+/* Add combinator and chaining to specify that
+   the element is a nested one and the rules should apply
+   for text. Since here is 2 class selectors compared to 1 from
+   generic rule, it would apply this style*/
+div .text.child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
 }
 
+/* It defines more specificity than just a child class,
+   since it uses simultaneously div and text*/
 div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
