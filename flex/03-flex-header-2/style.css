@@ -15,6 +15,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 8px;
 }
 
 .left-side-header,
@@ -22,8 +23,6 @@ body {
 {
   display: flex;
   align-items: center;
-  padding-left: 8px;
-  padding-right: 8px;
   gap: 16px;
 }
 
